@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from urllib import parse
 
 os.makedirs('images', exist_ok=True)
-url = 'https://sai-zen-sen.jp/comics/twi4/otomedanshi/'
+url = 'url'
 
 htmls = []
 
@@ -18,7 +18,7 @@ for link in comics.select('a'):
 
 htmls.reverse()
 
-base_url = 'https://sai-zen-sen.jp'
+base_url = 'base_url'
 for html in range(len(htmls)):
     html_url = htmls[html]
     soup = BeautifulSoup(requests.get(html_url).content, 'html.parser')
